@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first react project</title>
+  </head>
+  <body>
+    <div id="app-react"></div>
+    <div id="app-vanilla"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Create h1 element with React -->
+    <script>
+        // Create React component
+        const helloFromReactHeading = React.createElement('h1', null, 'Hello from React!')
+        
+        // Find element with app id.
+        const container = document.getElementById('app-react')
+        // Create root element with ReactDOM.
+        const root = ReactDOM.createRoot(container)
+        // Component rendering
+        root.render(helloFromReactHeading)
+    </script>
+    <!-- Create h1 element with vanilla Javascripthttp://127.0.0.1:5500/index.htmlhttp://127.0.0.1:5500/index.htmlhttp://127.0.0.1:5500/index.html -->
+    <script>
+        const heading = document.createElement('h1')
+        heading.textContent = 'Hello from vanilla JS'
+        document.getElementById('app-vanilla').appendChild(heading)
+    </script>
+  </body>
+</html>
